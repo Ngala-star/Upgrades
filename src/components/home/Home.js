@@ -17,7 +17,7 @@ const [ daysAlert, setDaysAlert] = useState('');
 const [alert, setAlert] = useState(false)
 const [more, setMore] = useState(false)
 
-//More button handles//
+//More button handles
 function openMore(){
   setMore(true)
 }
