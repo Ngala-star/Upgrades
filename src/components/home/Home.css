@@ -1,0 +1,136 @@
+@import "https://unpkg.com/open-props";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--gray-4);
+}
+header {
+  background-color: var(--stone-7);
+  position: sticky;
+  top: 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--size-2);
+  width: 95%;
+  margin-inline: auto;
+}
+.logo a, span h4{
+  text-decoration: none;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  font-style: italic;
+  color: var(--gray-3);
+}
+
+#nav-links {
+  display: flex;
+  align-items: center;
+  align-self: end;
+}
+@media (max-width: 768px) {
+  #nav-links{
+    display: none;
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+  }
+  .nav a{
+    display: none;
+  }
+  .nav span h4{
+    text-align: center;
+  }
+}
+
+#nav-links li {
+  list-style: none;
+  padding-inline: var(--size-3);
+  font-size: var(--font-size-3);
+}
+#sidebar {
+  padding-left: 0;
+  top: 70px;
+  left: -300px;
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  background-color: var(--stone-5);
+  transition: 0.3s ease-in-out;
+}
+#sidebar.show{
+  left: 0 ;
+}
+#sidebar li{
+  list-style: none;
+  padding-block: var(--size-4);
+  cursor: pointer;
+  text-align: left;
+  padding-left: 20px;
+}
+#sidebar li span:hover{
+  color: var(--lime-0);
+}
+#sidebar li a span:hover{
+ color: var(--lime-0);
+}
+#sidebar li a,span{
+  text-decoration: none;
+  font-size: var(--font-size-3);
+}
+.input-div {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: center;
+}
+.input-div input {
+  width:50%;
+}
+label{
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-6);
+}
+.daysLeft{
+  position: fixed;
+  top: 85px;
+  right: 20px;
+  display: none;
+}
+.show-modal{
+  display: block;
+  
+}
+.note{
+  width: 500px;
+  outline: none;
+}
+.note-area{
+ outline: none;
+ font-size: var(--font-size-3);
+}
+.buttons{
+  text-align: right;
+}
+.alert-modal{
+ position: relative;
+}
+.close-icon{
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  padding-inline: 6px;
+  outline: none;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
