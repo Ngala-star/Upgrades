@@ -8,7 +8,7 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<LadingPage/>}/>
+        <Route path="/" element={<LadingPage/>}/>
         <Route path="/view" element={<Home/>}/>
       </Routes>
       </BrowserRouter>
