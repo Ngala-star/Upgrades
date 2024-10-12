@@ -31,9 +31,13 @@ function toggleSidebar() {
 
 function showAlert(){
   setAlert(true)
+  setTimeout(()=>{
+    setAlert(false)
+  },5000)
 }
 function hideAlert(){
   setAlert(false)
+  
 }
 
 function handleCalculation(){
